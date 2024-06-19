@@ -1,0 +1,114 @@
+/* Reset some default styles */
+body, h1, input, button {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Body styling with background color */
+body {
+    background-color: #f0f8ff; /* Light blue background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Main heading styling */
+#main-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Grid container styling */
+.grid-Container {
+    display: grid;
+    grid-template-columns: 200px 150px 100px;
+    column-gap: 10px;
+    row-gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Input and button styling */
+#input-text, #todo-date {
+    font-size: 15px;
+    padding: 10px 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-todo {
+    color: white;
+    border: none;
+    background-color: #2874f0;
+    border-radius: 10px;
+    padding: 15px 0;
+    outline: none;
+    transition: ease-out 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-todo:hover {
+    color: #fff;
+    cursor: pointer;
+    background-color: #005cbf;
+}
+
+.btn-todo:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #42fb4b;
+}
+
+.btn-todo:hover:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+}
+
+/* Delete button styling */
+.btn-delete {
+    background-color: #ff0044;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+    transition: ease-out 0.3s;
+}
+
+.btn-delete:hover {
+    background-color: #d00036;
+    cursor: pointer;
+}
+
+/* Styling for TODO items */
+.todo-Container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    width: 500px;
+    max-width: 100%;
+}
+
+.todo-Container span {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
